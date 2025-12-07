@@ -72,7 +72,7 @@ export function main(command: string): void {
       "green"
     );
     const output = [
-      '<table border=2 cols=3"><tr><th>Item</th><th>Skill</th><th>Mall Price</th></tr>',
+      `<table border="2" cols="3"><tr><th>Item</th><th>Skill</th><th>Mall Price</th></tr>`,
     ];
 
     haveItems.forEach((item) => {
