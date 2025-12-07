@@ -7492,7 +7492,7 @@ function useReusable(inv) {
 
 function useReusableKarma(inv) {
   var bankedKarma = property_get("bankedKarma");
-  var limit = bankedKarma / 100;
+  var limit = Math.floor(bankedKarma / 100);
   var permable = inv.filter(item => item.reusable).slice(0, limit);
   (0,external_kolmafia_namespaceObject.print)("Found ".concat(permable.length, " reusable skill-granting items in your inventory that you haven't used and have the karma to softcore perm..."), "green");
   useAll(permable);
@@ -7500,7 +7500,7 @@ function useReusableKarma(inv) {
 
 function useAllKarma(inv) {
   var bankedKarma = property_get("bankedKarma");
-  var limit = bankedKarma / 100;
+  var limit = Math.floor(bankedKarma / 100);
   var permable = inv.slice(0, limit);
   (0,external_kolmafia_namespaceObject.print)("Found ".concat(permable.length, " skill-granting items in your inventory that you haven't used and have the karma to softcore perm..."), "green");
   useAll(permable);
