@@ -37,14 +37,14 @@
   },
   "author": "The Powers That Be",
   "license": "ISC",
-  "repository": "git+https://github.com/Glitched94/skillbooks.git",
+  "repository": "git+https://github.com/TheGlitchThatBe/skillbooks.git",
   "keywords": [
     "KoLMafia",
     "JS",
     "TS"
   ],
   "bugs": {
-    "url": "https://github.com/Glitched94/skillbooks/issues"
+    "url": "https://github.com/TheGlitchThatBe/skillbooks/issues"
   },
-  "homepage": "https://github.com/Glitched94/skillbooks#readme"
+  "homepage": "https://github.com/TheGlitchThatBe/skillbooks#readme"
 }
