@@ -7451,7 +7451,7 @@ function main(command) {
 
   if (!args.buy) {
     (0,external_kolmafia_namespaceObject.print)("Found ".concat(haveItems.length, " skill-granting items in your inventory that you haven't used..."), "green");
-    var output = ['<table border=2 cols=3"><tr><th>Item</th><th>Skill</th><th>Mall Price</th></tr>'];
+    var output = ["<table border=\"2\" cols=\"3\"><tr><th>Item</th><th>Skill</th><th>Mall Price</th></tr>"];
     haveItems.forEach(item => {
       output.push("<tr>" + "<td><p>".concat(item, "</p></td>") + "<td><p>".concat(item.skill, "</p></td>") + "<td><p>".concat((0,external_kolmafia_namespaceObject.toString)((0,external_kolmafia_namespaceObject.retrievePrice)(item), "%,d"), "</p></td>") + "</tr>");
     });
