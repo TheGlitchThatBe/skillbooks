@@ -7467,7 +7467,11 @@ function buyItems(items) {
   dontHave.forEach(item => {
     var itemPrice = (0,external_kolmafia_namespaceObject.mallPrice)(item);
 
-    if (itemPrice > 0 && itemPrice < args.buyLimit) {
+    if (itemPrice <= 0) {
+      (0,external_kolmafia_namespaceObject.print)("Skipping ".concat(item, ": no mall price available."), "red");
+    } else if (itemPrice >= args.buyLimit) {
+      (0,external_kolmafia_namespaceObject.print)("Skipping ".concat(item, ": ").concat((0,external_kolmafia_namespaceObject.toString)(itemPrice, "%,d"), " meets or exceeds buyLimit of ").concat((0,external_kolmafia_namespaceObject.toString)(args.buyLimit, "%,d"), "."), "orange");
+    } else {
       totalPrice += itemPrice;
       skillCount++;
 
