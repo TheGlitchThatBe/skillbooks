@@ -124,7 +124,7 @@ function useReusable(inv: Item[]) {
 
 function useReusableKarma(inv: Item[]) {
   var bankedKarma = get("bankedKarma");
-  var limit = bankedKarma / 100;
+  const limit = Math.floor(bankedKarma / 100);
 
   var permable = inv.filter((item) => item.reusable).slice(0, limit);
 
@@ -137,7 +137,7 @@ function useReusableKarma(inv: Item[]) {
 
 function useAllKarma(inv: Item[]) {
   var bankedKarma = get("bankedKarma");
-  var limit = bankedKarma / 100;
+  const limit = Math.floor(bankedKarma / 100);
 
   var permable = inv.slice(0, limit);
 
