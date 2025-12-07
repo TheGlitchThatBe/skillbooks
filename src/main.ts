@@ -96,7 +96,17 @@ function buyItems(items: Item[]) {
   var skillCount = 0;
   dontHave.forEach((item) => {
     var itemPrice = mallPrice(item);
-    if (itemPrice > 0 && itemPrice < args.buyLimit) {
+    if (itemPrice <= 0) {
+      print(`Skipping ${item}: no mall price available.`, "red");
+    } else if (itemPrice >= args.buyLimit) {
+      print(
+        `Skipping ${item}: ${toString(itemPrice, "%,d")} meets or exceeds buyLimit of ${toString(
+          args.buyLimit,
+          "%,d"
+        )}.`,
+        "orange"
+      );
+    } else {
       totalPrice += itemPrice;
       skillCount++;
       if (args.sim) {
