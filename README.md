@@ -3,7 +3,7 @@ This goal of this script is to help you find skill-granting items in your invent
 There are several flags that can be used when running this script to modify the behavior and what is used.
 
 ## Basic Usage
-Install by using `git checkout Glitched94/skillbooks.git release`
+Install by using `git checkout TheGlitchThatBe/skillbooks.git release`
 
 At it's core, the most basic usage of this script is calling `skillbooks`. This command will print a list of all skill-granting items in your inventory.
 ```
